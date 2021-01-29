@@ -1,0 +1,40 @@
+Issue Tracker SRS
+
+Introduction:
+- Purpose
+- Scope
+- Definitions
+- System Overview
+- References
+
+Overall Description:
+- Product Perspective
+- Product Functions
+- User Characteristics
+- Constraints, Assumptions and Dependencies
+
+Specific Requirements:
+- External Interfaces
+- Functions
+- Performance requirements
+- Logical Database Requirments
+- Design constraints
+- Key Features
+
+Validation Checks
+- Validity Check
+- Consistency Check
+- Realism Check
+- Verifiability Check
+- Completeness Checks
+
+Validation Techniques:
+- Requirement Reviews
+- Prototyping Techniques
+- Testcase Generation
+
+
+Functional Requirements: (expected uses)
+
+Non-functional Requirements: (sys properties and constraints eg. reliaibilty, response time, etc)
+- Appealing UX making use of Google material design

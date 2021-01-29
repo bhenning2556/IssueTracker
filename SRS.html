@@ -1,0 +1,168 @@
+<html lang="en">
+    <head>
+        <title>Issue Tracker SRS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
+    <style>
+        body {
+          padding: 15px;
+        }
+        h3, h4 {
+          color: #444444
+        }
+        .container {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    </style>   
+    <body>
+      <div class="container">  
+        <h1>Issue Tracker SRS</h1>
+        <h3>Author: Benjamin Henning, developer</h3>
+        <br>
+        <br>
+
+        <h2>1. Introduction</h2>
+
+        <h3>1.1. Purpose</h3>
+        <p>This System Requirements Specification (SRS) documentation will describe the functionality, requirements and constraints of the Issue Tracker application. This document will cover system features, functional requirements, non-functional requirements, external interface requirements, design and implementation requirements and constraints, assumptions, and dependencies.</p>
+
+        <h3>1.2. Intended Audience</h3>
+        <p>The stakeholders for this document are as follows:
+        <br><br><b>The developer, Benjamin Henning (me).</b>
+        <br>The developer will be in charge of writing the SRS ahead of the product development, and will be the sole contributor to changes.
+        <br>
+        <br><b>Employers, recruiters and clients.</b>
+        <br>This document will be publicly available, but the intended audience is anyone wishing to see how this project was created and developed, mainly employers, recruiters and clients. The document will aid in understanding the design process, intended features and functionality, and use cases of the application.</p>
+
+        <h3>1.3. Intended Use</h3>
+        <p>This document will be used in the following ways:</p>
+        <ol>
+            <li>To develop a project timeline with weekly sprints and deadlines.</li>
+            <li>To lay out requirements, features and functionality of the system to guide development.</li>
+            <li>To describe use cases of the application for end users that will aid in testing and demonstration.</li>
+        </ol>
+
+        <h3>1.4. Scope</h3>
+        <p>The Issue Tracker application is intended to be used by development teams, project managers, and individuals to track software bugs and issues. The application will give users functionality to view, add, edit, delete, and mark solved bugs and issues. The application will allow an admin to give users roles that give varying levels of permissions to access and manage bug tracking.</p>
+
+        <h3>1.5. Definitions</h3>
+        <table class="table">
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td>Someone who interacts with the Issue Tracking application</td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>System administrator who is given specific permission for managing and controlling the system</td>
+            </tr>
+            <tr>
+                <td>CRUD</td>
+                <td>Create, Read, Update and Delete. Describes how data is managed and viewed in a database-driven application.</td>
+            </tr>
+            <tr>
+                <td>MVC</td>
+                <td>Model, View, Controller - A popular software design pattern used to build web applications.</td>
+            </tr>
+        </table>
+
+        <h2>2. Overall Description</h2>
+        <p>The issue tracker software will be a solution for Project Managers and Development Teams to track bugs and issues in their systems. The application will have CRUD functionality, meaning users and admins will be able to easily manage and store bug data in a relational database. The application be built using the MVC design pattern, so the code and file structure will be familiar to any third parties who view or work on the application after the development period.</p>
+
+        <h3>2.1. User needs</h3>
+        <p>The intended audience for the application is developers and people with basic technical knowledge. However, the application's functionality should be affordable to the point that non-technical users can intuitively use basic features.</p>
+
+        <h3>2.2. Assumptions and Dependencies</h3>
+        <p>It is assumed that this software will be used for its intended purpose, which is to track bugs and issues for a piece of software or a system. It is assumed that users will have a basic knowledge of bug tracking applications and how they function.</p>
+
+        <h2>3. System Features and Requirements</h2>
+
+        <h3>3.1. Functional Requirements</h3>
+        <ul>
+          <li>
+            Landing page
+            <ul>
+              <li>
+                Login/register
+                <ul>
+                  <li>Users will be able to choose whether to login to an existing account or register for a new account.</li>
+                  <li>If the user selects register, they will be able to sign up for a new account and provide an email and password.</li>
+                  <li>If the user selects login, they will be prompted to enter an email and password.</li>
+                  <li>Users will be able select a "forgot your password" option to have a password reset sent to their email.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Dashboard
+            <ul>
+              <li>Users will be able to select which organization to view projects for.</li>
+              <li>Users will be able to select a project to view.</li>
+              <li>Users will be able to see statistics about projects in their organization.</li>
+            </ul>
+          </li>
+          <li>
+            Projects
+            <ul>
+              <li>Users will be able to perform CRUD operations on active issues. Creating or deleting issues has limited permissions.</li>
+            </ul>
+          </li>
+          <li>
+            User Profile
+            <ul>
+              <li>Users will be able to edit their profile details, such as their profile image, display name, email address, and
+                password.</li>
+            </ul>
+          </li>
+          <li>
+            Organizations
+            <ul>
+              <li>Users will be able to create a new organization, or join an existing one. Upon creating a new organization, the user will be assigned the Owner role by default.</li>
+              <li>Users with the role of Owner will be able to invite users to join their organization.</li>
+              <li>Users with the role of Owner will be able to assign or change roles of users in their organization.</li>
+              <li>Users with the role of Owner will be able to create new projects for their organization.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>3.2. Non-Functional Requirements</h3>
+        <ul>
+          <li>
+            Visual Design and Affordance
+            <ul>
+              <li>The web application should have an aesthetically pleasing design.</li>
+              <li>The web application should be responsive, so that it can be used on any screen size.</li>
+              <li>The navigation elements should indicate to the user their current location in the application (ex. the 'Dashboard' element should be highlighted if the user is viewing the dashboard).</li>
+            </ul>
+          </li>
+          <li>
+            Readability and Accessibility
+            <ul>
+              <li>All text should be easily distinguishable from background elements and typeface should be readable.</li>
+              <li>All colors on the web application should comply with AA contrast standards.</li>
+              <li>Different content should be contained in distinguishable sections.</li>
+            </ul>
+          </li>
+          <li>
+            Security
+            <ul>
+              <li>Application functionality should only be accessible to users with their assigned role's permission level (ex. A user that has been assigned a 'developer' role should not have access to functionality that only user's with the 'manager' role have permission for). </li>
+              <li>Account information, such as emails and passwords, should not be stored as plain text in the database.</li>
+            </ul>
+          </li>
+        </ul>
+        
+        <h3>3.3. System Requirements</h3>
+        <ul>
+          <li>A device with an internet connection.</li>
+          <li>A compatible browser.</li>
+        </ul>
+      </div>
+    </body>
+</html> 
