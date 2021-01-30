@@ -1,4 +1,4 @@
-### Issue Tracker
+## Issue Tracker
 This project is a full-stack web solution for Project Managers and Development Teams to track bugs and issues in their systems. The application will have CRUD functionality, meaning users and admins will be able to easily manage and store bug data in a relational database. The application be built using the MVC design pattern, so the code and file structure will be familiar to any third parties who view or work on the application after the development period.
 
 ## Development Process
